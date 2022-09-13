@@ -12,7 +12,7 @@ def prompt_user_for_input_until_valid():
     while not valid_input:
         user_input = input("")
         if user_input.lower() == "q":
-            print("Goodbye!")
+            print("\nGoodbye!")
             exit(0)
         else:
             valid_input = re.fullmatch(VALIDATOR, user_input).group()
@@ -30,6 +30,9 @@ def greet_user(name: str):
     print(f"\nHello \u001b[34m{name}!\u001b[0m\n")
 
 def print_menu_options():
+    """
+    Prints the instructions to the user.
+    """
     print("Please enter a valid name. or Q to quit.")
 
 def main():
